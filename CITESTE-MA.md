@@ -1,69 +1,59 @@
-# Obiceiurile mele
+# Jurnalul lui John
 
-Aplicație simplă pentru telefon, în care notezi zilnic cele 12 obiceiuri. O zi bună începe din seara de dinainte. De aceea fiecare zi începe cu seara de dinainte, apoi dimineața, câștigul zilei și partea de job, bani și business.
+O aplicație personală pentru obiceiuri, jurnal și drumul pe termen lung. Merge pe telefon și pe calculator, se instalează ca aplicație și funcționează și offline.
 
-## Ce conține folderul
+Adresa: https://johnneacsuu-star.github.io/obiceiuri-zilnice/
 
-* `index.html` este aplicația.
-* `manifest.webmanifest` este fișierul care îi spune telefonului numele, culorile și iconița aplicației.
-* `service-worker.js` păstrează aplicația pe telefon, ca să meargă și fără internet.
-* `icons/` conține iconițele.
+## Instalare pe telefon
 
-## Cum o instalezi pe telefon
-
-Aplicația trebuie mai întâi pusă pe o adresă HTTPS. Telefonul nu o poate instala direct dintr-un fișier. După ce ai adresa:
-
-### Android, cu Chrome
-
+**Android, Chrome**
 1. Deschide adresa în Chrome.
-2. Atinge meniul cu trei puncte din dreapta sus.
+2. Atinge meniul cu trei puncte.
 3. Alege „Adaugă pe ecranul principal” sau „Instalează aplicația”.
-4. Confirmă. Iconița „Obiceiuri” apare pe ecran.
 
-### iPhone, cu Safari
+**iPhone, Safari**
+1. Deschide adresa în Safari.
+2. Atinge butonul „Partajare”.
+3. Alege „Adaugă pe ecran”.
 
-1. Deschide adresa în Safari. Pe iPhone merge doar din Safari.
-2. Atinge butonul Partajare, pătratul cu săgeată în sus.
-3. Derulează și alege „Adaugă pe ecran”.
-4. Atinge „Adaugă”. Iconița „Obiceiuri” apare pe ecran.
+Pe calculator, în Chrome sau Edge, apare un buton de instalare în bara de adrese.
 
-## Fără internet
+## Ce găsești în aplicație
 
-După prima deschidere, aplicația merge și fără internet. Fără cod de sincronizare, datele stau doar pe dispozitiv, în browser. Cu cod, o copie ajunge în spațiul de stocare Netlify al siteului.
+* **Azi**: cele 12 obiceiuri, cu seara întâi. O atingere bifează obiceiurile simple. Pentru ore și minute se deschide o foaie cu ora exactă și butonul „Acum”.
+* **Seara**: după ora 17:00 aplicația deschide ziua de mâine, cu seara care o pregătește. După 21:15 tema devine bleumarin închis. Doar bifezi, deciziile așteaptă dimineața.
+* **Aur**: Seară de aur, Răsărit de aur, Zi câștigată, Buget și drum de aur, Zi de aur, Săptămână de aur.
+* **Jurnal**: vremea din tine în 9 stări, un scor de la 0 la 10, text liber, dictare în română, notă vocală și fotografii. Pe calculator, „Firul jurnalului” adună totul într-un singur loc, cu căutare.
+* **Progres**: săptămâna, ariile vieții pe radar, tendințe pe 30 și 90 de zile și harta ultimelor 6 luni.
+* **Drum**: popasuri la 30, 60, 90, 150 și 365 de zile pentru fiecare arie, „Acum și atunci” față de punctul de plecare din 18 octombrie 2026 și obiceiurile formate. Un obicei ținut 5 din 7 zile, 4 săptămâni la rând, devine obicei format, iar aplicația propune pasul următor. Tu alegi.
+* **Setări**: fotografia ta, ținte, nume, urmăriri opționale (cântarul săptămânii, energie, ore de somn), obiceiuri proprii, export și import.
 
-## Copia de siguranță
+Datele stau pe dispozitiv. Sincronizarea între telefon și calculator e opțională.
 
-Din Setări poți exporta un fișier JSON cu toate datele. Fă asta din când în când. Dacă schimbi telefonul sau ștergi datele browserului, imporți fișierul din același loc, cu „Importă JSON”.
+## Sincronizare prin GitHub
 
-Atenție: pe iPhone, aplicația instalată pe ecran și Safari au date separate. Folosește mereu iconița de pe ecran.
+Datele merg într-un depozit privat: **johnneacsuu-star/obiceiuri-date**. Acolo stau `data.json` și fotografiile și notele vocale în dosarul `media`.
 
-## Cum o folosești
+**Pasul 1. Creezi un token, o singură dată**
+1. Intră pe https://github.com/settings/personal-access-tokens/new
+2. Nume: „Jurnal”. Expirare: cât preferi, de exemplu un an.
+3. La „Repository access” alegi „Only select repositories” și bifezi doar **obiceiuri-date**.
+4. La „Permissions”, în secțiunea „Repository permissions”, setezi **Contents** pe „Read and write”.
+5. Apeși „Generate token” și copiezi tokenul.
 
-* Seara, după ora 17:00, aplicația deschide direct ziua de mâine, la secțiunea serii. Scrie „Seara asta pregătește ziua de ...”.
-* Dimineața deschide ziua de azi. Dacă n-ai apucat să completezi seara, o faci acum, sus de tot.
-* Cele 3 lucruri importante scrise seara în jurnal apar dimineața la „Cu ce te trezești azi”, cu căsuțe de bifat.
-* Orice zi trecută se completează din săgeți sau din calendar.
-* În Setări schimbi orele țintă, minutele, numele obiceiurilor și numele afacerii.
+**Pasul 2. Îl pui în aplicație, pe fiecare dispozitiv**
+1. Deschide aplicația, apoi Setări, apoi Sincronizare.
+2. Alege GitHub. Depozitul e completat deja.
+3. Lipește tokenul și apasă „Salvează”.
 
-## Insignele de aur
+Tokenul rămâne doar pe acel dispozitiv, în memoria browserului. Nu ajunge în cod, în depozit sau în altă parte. Dacă pierzi telefonul, îl ștergi din aceeași pagină GitHub și faci altul.
 
-Când toate cele 3 obiceiuri dintr-o grupă sunt făcute într-o zi, grupa se face aurie și primește o insignă:
+Fiecare sincronizare face un commit mic în depozitul privat. Fotografiile și notele vocale urcă o singură dată.
 
-* Seara de dinainte: „Seară de aur”
-* Dimineața: „Răsărit de aur”
-* Câștig ziua: „Zi câștigată”
-* Job, bani și business: „Buget și drum de aur”
+## Sincronizare prin Netlify, ca opțiune
 
-Toate 12 din 12 înseamnă „Zi de aur”, cu un soare mare pe ziua respectivă. Cinci zile de aur de luni până duminică înseamnă „Săptămână de aur”. În Săptămâna vezi câte insigne ai strâns și „Colecția de aur”, cu totalurile și cele mai lungi serii. Numele insignelor se schimbă din Setări.
+Dacă aplicația e găzduită pe Netlify, poți alege Netlify în Setări și un cod personal de minim 12 caractere, același pe toate dispozitivele. Pe GitHub Pages această variantă rămâne inactivă.
 
-## Telefon și calculator cu aceleași date
+## Copie de siguranță
 
-1. Deschide Setări, la Sincronizare.
-2. Alege un cod personal de cel puțin 12 caractere, greu de ghicit, și atinge „Salvează codul”.
-3. Pune exact același cod pe celălalt dispozitiv.
-
-De atunci aplicația se sincronizează singură la deschidere, după fiecare modificare și când revine internetul. Fără internet notezi normal, iar modificările pleacă mai târziu. Sub buton scrie când a fost ultima sincronizare.
-
-Dacă aceeași zi e modificată pe două dispozitive, rămâne varianta salvată ultima. Nu spune nimănui codul: cine îl are vede datele.
-
-Pe calculator, la o fereastră lată, aplicația arată două coloane: ziua în stânga, săptămâna și KPI în dreapta.
+Setări, apoi „Exportă JSON”, salvează un fișier JSON cu obiceiurile și jurnalul. Fotografiile și notele vocale stau în depozitul privat, când sincronizarea e pornită.

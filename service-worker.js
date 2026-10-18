@@ -1,7 +1,9 @@
-var CACHE = "obiceiuri-v2";
+var CACHE = "jurnal-v3-1";
 var ASSETS = [
   "./",
   "./index.html",
+  "./app.css",
+  "./app.js",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

@@ -1,12 +1,12 @@
 {
-  "name": "Obiceiurile mele",
-  "short_name": "Obiceiuri",
+  "name": "Jurnalul lui John",
+  "short_name": "Jurnal",
   "description": "O zi bună începe din seara de dinainte.",
   "lang": "ro",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait",
+  "orientation": "any",
   "background_color": "#F7F1E6",
   "theme_color": "#1F3A4D",
   "icons": [
